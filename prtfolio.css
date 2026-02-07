@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8%;
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffd5;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 8% 60px 8%;
+    min-height: 90vh;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.hero-text span {
+    color: #00ffd5;
+}
+
+.hero-img img {
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.4),
+        0 0 0 5px rgba(255,255,255,0.05);
+    transition: 0.4s ease;
+}
+
+.hero-img img:hover {
+    transform: scale(1.03);
+}
+
+.section {
+    padding: 50px 8%;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #00ffd5;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.bar {
+    height: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+}
+
+.progress {
+    height: 100%;
+    background: #00ffd5;
+    border-radius: 5px;
+    animation: fill 2s ease-in-out;
+}
+
+@keyframes fill {
+    from { width: 0; }
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.card>ul{
+    padding: 10px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.2);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00ffd5;
+    color: black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s ease;
+}
+
+.reveal.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-img {
+        width: 100%;
+    }
+
+    .hero-img img {
+        margin-top: 20px;
+    }
+}
