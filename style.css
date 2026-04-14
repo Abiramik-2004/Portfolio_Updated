@@ -70,21 +70,48 @@ h2 {
     color: #00ffd5;
 }
 
-.skill {
-    margin-bottom: 15px;
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.bar {
-    height: 8px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 5px;
+.skill-box {
+    height: 160px; /* fixed height for ratio */
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.progress {
-    height: 100%;
-    background: #00ffd5;
-    border-radius: 5px;
-    animation: fill 2s ease-in-out;
+/* Top 3/4 Image */
+.skill-box img {
+    height: 75%;          /* 3/4 */
+    width: 100%;
+    object-fit: cover;    /* fills fully */
+}
+
+/* Bottom 1/4 Title */
+.skill-box p {
+    height: 25%;          /* 1/4 */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 255, 213, 0.3);
 }
 
 @keyframes fill {
