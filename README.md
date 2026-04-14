@@ -45,6 +45,5 @@ AI-powered application using OpenCV and YOLOv8 for real-time obstacle detection 
 - Improve UI animations
 - Add dark/light theme toggle
 
----
+<img width="1879" height="847" alt="Screenshot (56)" src="https://github.com/user-attachments/assets/0d2197b5-817c-4ec8-8b9d-dc198b82e529" />
 
-⭐ If you like this project, feel free to star the repository!
